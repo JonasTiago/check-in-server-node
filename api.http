@@ -1,0 +1,30 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 12,
+    "details": "Um evento...",
+    "maximumAttendees": 1
+}
+
+####
+POST http://localhost:3333/events/519fe5de-9ad8-4cbf-a199-bbe55ccc8df5/attendees
+Content-Type: application/json
+
+{
+    "name": "Jonas Tiago",
+    "email": "jonas12@gmail.com"
+}   
+
+####
+GET http://localhost:3333/events/0267f78c-678e-406a-a1ea-03c89939cb69
+
+
+###
+GET http://localhost:3333/attendees/1/badge
+
+###
+GET http://localhost:3333/attendees/1/check-in
+
+###
+GET http://localhost:3333/events/0267f78c-678e-406a-a1ea-03c89939cb69/attendees?query=jonas
